@@ -1,4 +1,4 @@
-// solution 1 (iterative)
+// Approach 1: Iterative
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
         ListNode cur = head;
@@ -13,7 +13,7 @@ class Solution {
     }
 }
 
-// solution 2 (recursive)
+// Approach 2: Recursive
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
         if (head == null || head.next == null) {
