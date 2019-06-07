@@ -1,11 +1,11 @@
 class Solution {
     public String toLowerCase(String str) {
-        char[] ca = str.toCharArray();
-        for (int i = 0; i < ca.length; i++) {
-            if (ca[i] >= 'A' && ca[i] <= 'Z') {
-                ca[i] += 'a' - 'A';
+        char[] data = str.toCharArray();
+        for (int i = 0; i < data.length; i++) {
+            if (data[i] >= 'A' && data[i] <= 'Z') {
+                data[i] += 'a' - 'A';
             }
         }
-        return String.valueOf(ca);
+        return String.valueOf(data);
     }
 }
