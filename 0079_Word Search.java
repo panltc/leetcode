@@ -18,12 +18,13 @@ class Solution {
             return false;
         }
         board[i][j] = '#';
-        boolean b = 
-            backtrack(board, i - 1, j, word, k + 1) || 
+        if (backtrack(board, i - 1, j, word, k + 1) || 
             backtrack(board, i + 1, j, word, k + 1) || 
             backtrack(board, i, j - 1, word, k + 1) ||
-            backtrack(board, i, j + 1, word, k + 1);
+            backtrack(board, i, j + 1, word, k + 1)) {
+            return true;
+        }
         board[i][j] = word.charAt(k);
-        return b;
+        return false;
     }
 }
