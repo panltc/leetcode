@@ -4,6 +4,12 @@ class Solution {
         Arrays.sort(nums);
         List<List<Integer>> res = new ArrayList<>();
         for (int i = 0; i < N - 2 && nums[i] <= 0; i++) {
+            if (nums[i] + nums[i + 1] + nums[i + 2] > 0) {
+                break;
+            }
+            if (nums[i] + nums[N - 2] + nums[N - 1] < 0) {
+                continue;
+            }
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
