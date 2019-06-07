@@ -7,11 +7,11 @@ class Solution {
         return res;
     }
     
-    private String generate(String s) {
+    private String generate(String res) {
         StringBuilder sb = new StringBuilder();
-        char cur = s.charAt(0);
+        char cur = res.charAt(0);
         int cnt = 0;
-        for (char c : s.toCharArray()) {
+        for (char c : res.toCharArray()) {
             if (c != cur) {
                 sb.append(cnt);
                 sb.append(cur);
