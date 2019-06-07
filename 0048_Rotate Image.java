@@ -1,4 +1,4 @@
-// solution 1
+// Approach 1
 class Solution {
     public void rotate(int[][] matrix) {
         int N = matrix.length;
@@ -9,30 +9,22 @@ class Solution {
                 matrix[j][i] = tmp;
             }
         }
-        int j = 0;
-        int k = N - 1;
-        while (j < k) {
+        for (int j = 0, k = N - 1; j < k; j++, k--) {
             for (int i = 0; i < N; i++) {
                 int tmp = matrix[i][j];
                 matrix[i][j] = matrix[i][k];
                 matrix[i][k] = tmp;
             }
-            j++;
-            k--;
         }
     }
 }
 
-// solution 2
+// Approach 2
 class Solution {
     public void rotate(int[][] matrix) {
         int N = matrix.length;
-        int tr = 0;
-        int tc = 0;
-        int dr = N - 1;
-        int dc = N - 1;
-        while (tr < dr) {
-            rotateEdge(matrix, tr++, tc++, dr--, dc--);
+        for (int tr = 0, tc = 0, dr = N - 1, dc = N - 1; tr < dr; tr++, tc++, dr--, dc--) {
+            rotateEdge(matrix, tr, tc, dr, dc);
         }
     }
     
