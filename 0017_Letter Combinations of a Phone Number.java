@@ -1,10 +1,10 @@
 class Solution {
     public List<String> letterCombinations(String digits) {
-        String[] strs = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
         List<String> res = new ArrayList<>();
         if (digits.isEmpty()) {
             return res;
         }
+        String[] strs = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
         backtrack(digits, strs, 0, "", res);
         return res;
     }
