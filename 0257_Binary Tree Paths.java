@@ -13,7 +13,7 @@ class Solution {
             res.add(cur + root.val);
             return;
         }
-        binaryTreePaths(root.left, cur + root.val + "->" , res);
-        binaryTreePaths(root.right, cur + root.val + "->" , res);
+        binaryTreePaths(root.left, cur + root.val + "->", res);
+        binaryTreePaths(root.right, cur + root.val + "->", res);
     }
 }
