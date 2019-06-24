@@ -9,7 +9,7 @@ class Solution {
                 set.remove(s.charAt(i++));
             }
             j++;
-            res = Math.max(set.size(), res);
+            res = Math.max(j - i, res);
         }
         return res;
     }
