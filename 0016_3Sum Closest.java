@@ -8,15 +8,16 @@ class Solution {
             int k = N - 1;
             while (j < k) {
                 int sum = nums[i] + nums[j] + nums[k];
-                if (Math.abs(sum - target) < Math.abs(res - target)) {
-                    res = sum;
+                if (sum == target) {
+                    return sum;
                 }
                 if (sum < target) {
                     j++;
-                } else if (sum > target) {
-                    k--;
                 } else {
-                    return sum;
+                    k--;
+                }
+                if (Math.abs(sum - target) < Math.abs(res - target)) {
+                    res = sum;
                 }
             }
         }
