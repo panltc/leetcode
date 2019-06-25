@@ -27,11 +27,7 @@ class Solution {
                 int l = N - 1;
                 while (k < l) {
                     int sum = nums[i] + nums[j] + nums[k] + nums[l];
-                    if (sum < target) {
-                        k++;
-                    } else if (sum > target) {
-                        l--;
-                    } else {
+                    if (sum == target) {
                         res.add(Arrays.asList(nums[i], nums[j], nums[k], nums[l]));
                         while (k < l && nums[k] == nums[k + 1]) {
                             k++;
@@ -40,6 +36,10 @@ class Solution {
                             l--;
                         }
                         k++;
+                        l--;
+                    } else if (sum < target) {
+                        k++;
+                    } else {
                         l--;
                     }
                 }
