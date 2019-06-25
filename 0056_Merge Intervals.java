@@ -1,18 +1,18 @@
 class Solution {
     public int[][] merge(int[][] intervals) {
         int N = intervals.length;
-        int[] begins = new int[N];
-        int[] ends = new int[N];
+        int[] lows = new int[N];
+        int[] highs = new int[N];
         for (int i = 0; i < N; i++) {
-            begins[i] = intervals[i][0];
-            ends[i] = intervals[i][1];
+            lows[i] = intervals[i][0];
+            highs[i] = intervals[i][1];
         }
-        Arrays.sort(begins);
-        Arrays.sort(ends);
+        Arrays.sort(lows);
+        Arrays.sort(highs);
         List<int[]> list = new ArrayList<>();
         for (int i = 0, j = 0; i < N; i++) {
-            if (i == N - 1 || begins[i + 1] > ends[i]) {
-                list.add(new int[] {begins[j], ends[i]});
+            if (i == N - 1 || lows[i + 1] > highs[i]) {
+                list.add(new int[] {lows[j], highs[i]});
                 j = i + 1;
             }
         }
