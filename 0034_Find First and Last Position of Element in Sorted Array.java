@@ -5,12 +5,12 @@ class Solution {
         int high = N - 1;
         while (low < high) {
             int mid = low + (high - low) / 2;
-            if (nums[mid] < target) {
-                low = mid + 1;
-            } else if (nums[mid] > target) {
-                high = mid - 1;
-            } else {
+            if (nums[mid] == target) {
                 high = mid;
+            } else if (nums[mid] < target) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
             }
         }
         int[] res = new int[] {-1, -1};
@@ -21,10 +21,10 @@ class Solution {
         high = N;
         while (low < high) {
             int mid = low + (high - low) / 2;
-            if (nums[mid] > target) {
-                high = mid;
-            } else {
+            if (nums[mid] <= target) {
                 low = mid + 1;
+            } else {
+                high = mid;
             }
         }
         res[1] = high - 1;
