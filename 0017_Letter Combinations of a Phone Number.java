@@ -5,18 +5,18 @@ class Solution {
             return res;
         }
         String[] strs = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-        backtrack(digits, strs, 0, "", res);
+        dfs(digits, strs, 0, "", res);
         return res;
     }
     
-    private void backtrack(String digits, String[] strs, int i, String cur, List<String> res) {
+    private void dfs(String digits, String[] strs, int i, String cur, List<String> res) {
         if (i == digits.length()) {
             res.add(cur);
             return;
         }
         String str = strs[digits.charAt(i) - '0'];
         for (char c : str.toCharArray()) {
-            backtrack(digits, strs, i + 1, cur + c, res);
+            dfs(digits, strs, i + 1, cur + c, res);
         }
     }
 }
