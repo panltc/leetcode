@@ -8,12 +8,13 @@ class Solution {
         int i = 0;
         int j = N - 1;
         while (i < M && j >= 0) {
+            if (matrix[i][j] == target) {
+                return true;
+            }
             if (matrix[i][j] < target) {
                 i++;
-            } else if (matrix[i][j] > target) {
-                j--;
             } else {
-                return true;
+                j--;
             }
         }
         return false;
