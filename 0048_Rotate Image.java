@@ -1,4 +1,4 @@
-// approach 1
+// Approach 1
 class Solution {
     public void rotate(int[][] matrix) {
         int N = matrix.length;
@@ -19,7 +19,7 @@ class Solution {
     }
 }
 
-// approach 2
+// Approach 2
 class Solution {
     public void rotate(int[][] matrix) {
         int N = matrix.length;
