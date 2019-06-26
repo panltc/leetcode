@@ -1,4 +1,4 @@
-// approach 1: iterative
+// Approach 1: Iterative
 class Solution {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode(0);
@@ -21,7 +21,7 @@ class Solution {
     }
 }
 
-// approach 2: recursive
+// Approach 2: Recursive
 class Solution {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null && l2 == null) {
