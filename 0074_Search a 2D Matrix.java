@@ -1,4 +1,4 @@
-// Approach 1
+// approach 1
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
         int M = matrix.length;
@@ -30,7 +30,7 @@ class Solution {
     }
 }
 
-// Approach 2
+// approach 2
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
         int M = matrix.length;
