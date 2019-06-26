@@ -5,21 +5,21 @@ class Solution {
         queue.offer(root);
         queue.offer(root);
         while (!queue.isEmpty()) {
-            TreeNode r1 = queue.poll();
-            TreeNode r2 = queue.poll();
-            if (r1 == null && r2 == null) {
+            TreeNode t1 = queue.poll();
+            TreeNode t2 = queue.poll();
+            if (t1 == null && t2 == null) {
                 continue;
             }
-            if (r1 == null || r2 == null) {
+            if (t1 == null || t2 == null) {
                 return false;
             }
-            if (r1.val != r2.val) {
+            if (t1.val != t2.val) {
                 return false;
             }
-            queue.offer(r1.left);
-            queue.offer(r2.right);
-            queue.offer(r1.right);
-            queue.offer(r2.left);
+            queue.offer(t1.left);
+            queue.offer(t2.right);
+            queue.offer(t1.right);
+            queue.offer(t2.left);
         }
         return true;
     }
@@ -34,13 +34,16 @@ class Solution {
         return isSymmetric(root.left, root.right);
     }
     
-    private boolean isSymmetric(TreeNode r1, TreeNode r2) {
-        if (r1 == null && r2 == null) {
+    private boolean isSymmetric(TreeNode t1, TreeNode t2) {
+        if (t1 == null && t2 == null) {
             return true;
         }
-        if (r1 == null || r2 == null) {
+        if (t1 == null || t2 == null) {
             return false;
         }
-        return (r1.val == r2.val) && isSymmetric(r1.left, r2.right) && isSymmetric(r1.right, r2.left);
+        if (t1.val != t2.val) {
+            return false;
+        }
+        return isSymmetric(t1.left, t2.right) && isSymmetric(t1.right, t2.left);
     }
 }
