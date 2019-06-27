@@ -1,5 +1,5 @@
 class MyStack {
-    Queue<Integer> queue;
+    private Queue<Integer> queue;
 
     /** Initialize your data structure here. */
     public MyStack() {
