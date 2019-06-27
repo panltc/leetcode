@@ -6,7 +6,7 @@ class Solution {
             while (!set.add(s.charAt(j))) {
                 set.remove(s.charAt(i++));
             }
-            res = Math.max(res, j - i + 1);
+            res = Math.max(j - i + 1, res);
         }
         return res;
     }
