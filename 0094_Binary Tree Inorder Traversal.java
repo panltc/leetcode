@@ -1,4 +1,4 @@
-// Approach 1: Iterative
+// Approach 1: iterative
 class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList<>();
@@ -17,7 +17,7 @@ class Solution {
     }
 }
 
-// Approach 2: Recursive
+// Approach 2: recursive
 class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList<>();
