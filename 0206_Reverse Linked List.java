@@ -1,4 +1,4 @@
-// solution 1 (iterative)
+// Approach 1: iterative
 class Solution {
     public ListNode reverseList(ListNode head) {
         ListNode dummy = new ListNode(0);
@@ -13,7 +13,7 @@ class Solution {
     }
 }
 
-// solution 2 (recursive)
+// Approach 2: recursive
 class Solution {
     public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null) {
