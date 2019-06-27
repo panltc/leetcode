@@ -1,3 +1,4 @@
+// Approach 1: iterative
 class Solution {
     public ListNode removeElements(ListNode head, int val) {
         ListNode dummy = new ListNode(0);
@@ -11,5 +12,16 @@ class Solution {
             }
         }
         return dummy.next;
+    }
+}
+
+// Approach 2: recursive
+class Solution {
+    public ListNode removeElements(ListNode head, int val) {
+        if (head == null) {
+            return head;
+        }
+        head.next = removeElements(head.next, val);
+        return head.val == val ? head.next : head;
     }
 }
