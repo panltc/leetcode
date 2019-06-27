@@ -1,10 +1,11 @@
 class MyQueue {
-    private Stack<Integer> stack1 = new Stack<>();
-    private Stack<Integer> stack2 = new Stack<>();
+    private Stack<Integer> stack1;
+    private Stack<Integer> stack2;
 
     /** Initialize your data structure here. */
     public MyQueue() {
-        
+        stack1 = new Stack<>();
+        stack2 = new Stack<>();
     }
     
     /** Push element x to the back of queue. */
