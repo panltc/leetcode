@@ -1,15 +1,15 @@
 class MyStack {
-    private Queue<Integer> queue = new LinkedList<>();
+    Queue<Integer> queue;
 
     /** Initialize your data structure here. */
     public MyStack() {
-        
+        queue = new LinkedList<>();
     }
     
     /** Push element x onto stack. */
     public void push(int x) {
         queue.offer(x);
-        for (int i = queue.size() - 1; i > 0; i--) {
+        for (int i = queue.size() - 1; i >= 1; i--) {
             queue.offer(queue.poll());
         }
     }
