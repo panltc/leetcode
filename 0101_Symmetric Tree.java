@@ -1,4 +1,4 @@
-// Approach 1: Iterative
+// Approach 1: iterative
 class Solution {
     public boolean isSymmetric(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
@@ -25,7 +25,7 @@ class Solution {
     }
 }
 
-// Approach 2: Recursive
+// Approach 2: recursive
 class Solution {
     public boolean isSymmetric(TreeNode root) {
         if (root == null) {
