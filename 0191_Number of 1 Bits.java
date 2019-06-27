@@ -1,4 +1,4 @@
-// solution 1
+// Approach 1
 public class Solution {
     // you need to treat n as an unsigned value
     public int hammingWeight(int n) {
@@ -11,7 +11,7 @@ public class Solution {
     }
 }
 
-// solution 2
+// Approach 2
 public class Solution {
     // you need to treat n as an unsigned value
     public int hammingWeight(int n) {
