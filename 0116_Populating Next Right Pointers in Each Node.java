@@ -1,4 +1,4 @@
-// Approach 1: Iterative
+// Approach 1: iterative
 class Solution {
     public Node connect(Node root) {
         if (root == null) {
@@ -20,7 +20,7 @@ class Solution {
     }
 }
 
-// Approach 2: Recursive
+// Approach 2: recursive
 class Solution {
     public Node connect(Node root) {
         if (root == null || root.left == null) {
