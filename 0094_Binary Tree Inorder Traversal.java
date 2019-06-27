@@ -1,8 +1,8 @@
 // Approach 1: Iterative
 class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
-        Stack<TreeNode> stack = new Stack<>();
         List<Integer> res = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
         while (!stack.isEmpty() || root != null) {
             if (root == null) {
                 root = stack.pop();
