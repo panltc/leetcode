@@ -1,4 +1,4 @@
-// solution 1 (iterative)
+// Approach 1: Iterative
 class Solution {
     public int trailingZeroes(int n) {
         int res = 0;
@@ -10,7 +10,7 @@ class Solution {
     }
 }
 
-// solution 2 (recursive)
+// Approach 2: Recursive
 class Solution {
     public int trailingZeroes(int n) {
         return n < 5 ? 0 : n / 5 + trailingZeroes(n / 5);
