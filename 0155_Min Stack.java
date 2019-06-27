@@ -1,10 +1,11 @@
 class MinStack {
-    private Stack<Integer> stack = new Stack<>();
-    private int min = Integer.MAX_VALUE;
-    
+    private Stack<Integer> stack;
+    private int min;
+
     /** initialize your data structure here. */
     public MinStack() {
-        
+        stack = new Stack<>();
+        min = Integer.MAX_VALUE;
     }
     
     public void push(int x) {
