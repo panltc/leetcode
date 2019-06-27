@@ -5,7 +5,7 @@ class Solution {
         int j = height.length - 1;
         while (i < j) {
             int min = height[i] < height[j] ? height[i++] : height[j--];
-            res = Math.max(res, min * (j - i + 1));
+            res = Math.max(min * (j - i + 1), res);
         }
         return res;
     }
