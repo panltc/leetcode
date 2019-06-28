@@ -1,24 +1,22 @@
-// solution 1 (iterative)
+// Approach 1: iterative
 class Solution {
     public void reverseString(char[] s) {
-        int i = 0;
-        int j = s.length - 1;
-        while (i < j) {
+        for (int i = 0, j = s.length - 1; i < j; i++, j--) {
             char tmp = s[i];
-            s[i++] = s[j];
-            s[j--] = tmp;
+            s[i] = s[j];
+            s[j] = tmp;
         }
     }
 }
 
-// solution 2 (recursive)
+// Approach 2: recursive
 class Solution {
     public void reverseString(char[] s) {
         reverseString(s, 0, s.length - 1);
     }
     
     private void reverseString(char[] s, int i, int j) {
-        if (i >= j) {
+        if (i > j) {
             return;
         }
         char tmp = s[i];
