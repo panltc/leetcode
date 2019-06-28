@@ -9,15 +9,15 @@ class Solution {
             }
         }
         int res = 0;
-        int i = 0;
+        boolean odd = false;
         for (int cnt : cnts) {
             if (cnt % 2 != 0) {
                 res += cnt - 1;
-                i = 1;
+                odd = true;
             } else {
                 res += cnt;
             }
         }
-        return res + i;
+        return odd ? res + 1 : res;
     }
-}       
+}
