@@ -1,6 +1,6 @@
 class Solution {
     public int findComplement(int num) {
-        int cur = 0;
+        int cur = 1;
         while (cur < num) {
             cur = cur * 2 + 1;
         }
