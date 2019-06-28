@@ -1,14 +1,14 @@
 class MyCircularQueue {
-    private int[] queue;
     private int N;
+    private int[] queue;
+    private int size = 0;
     private int front = 0;
     private int rear = -1;
-    private int size = 0;
 
     /** Initialize your data structure here. Set the size of the queue to be k. */
     public MyCircularQueue(int k) {
-        queue = new int[k];
         N = k;
+        queue = new int[k];
     }
     
     /** Insert an element into the circular queue. Return true if the operation is successful. */
