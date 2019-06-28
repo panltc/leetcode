@@ -9,8 +9,8 @@ class Solution {
                 matrix[j][i] = tmp;
             }
         }
-        for (int j = 0, k = N - 1; j < k; j++, k--) {
-            for (int i = 0; i < N; i++) {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0, k = N - 1; j < k; j++, k--) {
                 int tmp = matrix[i][j];
                 matrix[i][j] = matrix[i][k];
                 matrix[i][k] = tmp;
