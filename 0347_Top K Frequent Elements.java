@@ -6,11 +6,11 @@ class Solution {
         }
         PriorityQueue<Integer> pq = new PriorityQueue<>(new Comparator<Integer>() {
             @Override
-            public int compare(Integer o1, Integer o2) {
-                return map.get(o2) - map.get(o1);
+            public int compare(Integer i1, Integer i2) {
+                return map.get(i2) - map.get(i1);
             }
         });
-        for (int key : map.keySet()) {
+        for (Integer key : map.keySet()) {
             pq.offer(key);
         }
         List<Integer> res = new ArrayList<>();
