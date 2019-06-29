@@ -2,12 +2,11 @@ class Solution {
     public int[] sortArrayByParity(int[] A) {
         int i = 0;
         int j = A.length - 1;
-        int k = 0;
-        while (k <= j) {
-            if (A[k] % 2 == 0) {
-                swap(A, i++, k++);
+        while (i < j) {
+            if (A[i] % 2 != 0) {
+                swap(A, i, j--);
             } else {
-                swap(A, k, j--);
+                i++;
             }
         }
         return A;
