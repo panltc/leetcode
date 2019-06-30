@@ -5,13 +5,13 @@ class Solution {
             cnts[task - 'A']++;
         }
         Arrays.sort(cnts);
-        int sum = (cnts[25] - 1) * (n + 1);
+        int res = (cnts[25] - 1) * (n + 1);
         for (int i = 25; i >= 0; i--) {
             if (cnts[i] != cnts[25]) {
                 break;
             }
-            sum++;
+            res++;
         }
-        return Math.max(tasks.length, sum);
+        return Math.max(tasks.length, res);
     }
 }
