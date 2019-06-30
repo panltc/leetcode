@@ -1,4 +1,4 @@
-// solution 1
+// Approach 1
 class Solution {
     public int romanToInt(String s) {
         int res = 0;
@@ -24,7 +24,7 @@ class Solution {
     }
 }
 
-// solution 2
+// Approach 2
 class Solution {
     public int romanToInt(String s) {
         Map<Character, Integer> map = new HashMap<Character, Integer>() {
