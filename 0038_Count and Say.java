@@ -12,13 +12,13 @@ class Solution {
         char cur = res.charAt(0);
         int cnt = 0;
         for (char c : res.toCharArray()) {
-            if (c == cur) {
-                cnt++;
-            } else {
+            if (c != cur) {
                 sb.append(cnt);
                 sb.append(cur);
                 cur = c;
                 cnt = 1;
+            } else {
+                cnt++;
             }
         }
         sb.append(cnt);
