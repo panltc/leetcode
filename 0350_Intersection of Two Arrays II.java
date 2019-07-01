@@ -13,8 +13,8 @@ class Solution {
         }
         int[] res = new int[list.size()];
         int i = 0;
-        for (Integer num : list) {
-            res[i++] = num;
+        for (Integer data : list) {
+            res[i++] = data;
         }
         return res;
     }
