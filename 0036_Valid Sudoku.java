@@ -5,7 +5,9 @@ class Solution {
             for (int j = 0; j < 9; j++) {
                 char c = board[i][j];
                 if (c != '.') {
-                    if (!set.add(i + "r: " + c) || !set.add(j + "c: " + c) || !set.add(i / 3 + ", " + j / 3 + "b: " + c)) {
+                    if (!set.add(i + "r: " + c) || 
+                        !set.add(j + "c: " + c) || 
+                        !set.add(i / 3 + ", " + j / 3 + "b: " + c)) {
                         return false;
                     }
                 }
