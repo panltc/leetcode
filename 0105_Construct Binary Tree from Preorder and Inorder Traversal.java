@@ -3,18 +3,20 @@ class Solution {
         return buildTree(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1);
     }
     
-    private TreeNode buildTree(int[] preorder, int beginpre, int endpre, int[] inorder, int beginin, int endin) {
-        if (beginpre > endpre || beginin > endin) {
+    private TreeNode buildTree(int[] preorder, int ipre, int jpre, int[] inorder, int iin, int jin) {
+        if (ipre > jpre || iin > jin) {
             return null;
         }
-        TreeNode root = new TreeNode(preorder[beginpre]);
         int pos = 0;
-        while (inorder[pos] != preorder[beginpre]) {
-            pos++;
+        for (int k = iin; k <= jin; k++) {
+            if (inorder[k] == preorder[ipre]) {
+                pos = k;
+            }
         }
-        int cnt = i - beginin;
-        root.left = buildTree(preorder, beginpre + 1, beginpre + cnt, inorder, beginin, pos - 1);
-        root.right = buildTree(preorder, beginpre + cnt + 1, endpre, inorder, pos + 1, endin);
+        int cnt = pos - iin;
+        TreeNode root = new TreeNode(preorder[ipre]);
+        root.left = buildTree(preorder, ipre + 1, ipre + cnt, inorder, iin, pos - 1);
+        root.right = buildTree(preorder, ipre + cnt + 1, jpre, inorder, pos + 1, jin);
         return root;
     }
 }
