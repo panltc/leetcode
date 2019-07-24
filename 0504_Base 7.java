@@ -4,10 +4,10 @@ class Solution {
             return "0";
         }
         StringBuilder sb = new StringBuilder();
-        int data = Math.abs(num);
-        while (data > 0) {
-            sb.append(data % 7);
-            data /= 7;
+        int cur = Math.abs(num);
+        while (cur > 0) {
+            sb.append(cur % 7);
+            cur /= 7;
         }
         if (num < 0) {
             sb.append('-');
