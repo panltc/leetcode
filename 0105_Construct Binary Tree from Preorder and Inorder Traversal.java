@@ -8,10 +8,8 @@ class Solution {
             return null;
         }
         int pos = 0;
-        for (int k = iin; k <= jin; k++) {
-            if (inorder[k] == preorder[ipre]) {
-                pos = k;
-            }
+        while (inorder[pos] != preorder[ipre]) {
+            pos++;
         }
         int cnt = pos - iin;
         TreeNode root = new TreeNode(preorder[ipre]);
