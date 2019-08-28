@@ -18,8 +18,8 @@ class Solution {
         int[] cnts = new int[26];
         int min = 25;
         for (char c : str.toCharArray()) {
-            min = Math.min(c - 'a', min);
             cnts[c - 'a']++;
+            min = Math.min(c - 'a', min);
         }
         return cnts[min];
     }
