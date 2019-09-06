@@ -28,7 +28,7 @@ class Solution {
 class Solution {
     public int romanToInt(String s) {
         Map<Character, Integer> map = new HashMap<Character, Integer>() {
-            {
+            {     
                 put('I', 1);
                 put('V', 5);
                 put('X', 10);
@@ -38,13 +38,12 @@ class Solution {
                 put('M', 1000);
             }
         };
-        int N = s.length();
+        int len = s.length();
         int res = 0;
-        for (int i = 0; i < N - 1; i++) {
-            char c = s.charAt(i);
-            res += map.get(c) < map.get(s.charAt(i + 1)) ? -map.get(c) : map.get(c);
+        for (int i = 0; i < len - 1; i++) {
+            res += map.get(s.charAt(i)) < map.get(s.charAt(i + 1)) ? -map.get(s.charAt(i)) : map.get(s.charAt(i));
         }
-        res += map.get(s.charAt(N - 1));
+        res += map.get(s.charAt(len - 1));
         return res;
     }
 }
