@@ -1,22 +1,23 @@
 class Solution {
+    private List<String> res = new ArrayList<>();
+    private String[] strs = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+    
     public List<String> letterCombinations(String digits) {
-        List<String> res = new ArrayList<>();
         if (digits.isEmpty()) {
             return res;
         }
-        String[] strs = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-        dfs(digits, strs, 0, "", res);
+        dfs(digits, 0, "");
         return res;
     }
     
-    private void dfs(String digits, String[] strs, int i, String cur, List<String> res) {
+    private void dfs(String digits, int i, String data) {
         if (i == digits.length()) {
-            res.add(cur);
+            res.add(data);
             return;
         }
         String str = strs[digits.charAt(i) - '0'];
         for (char c : str.toCharArray()) {
-            dfs(digits, strs, i + 1, cur + c, res);
+            dfs(digits, i + 1, data + c);
         }
     }
 }
