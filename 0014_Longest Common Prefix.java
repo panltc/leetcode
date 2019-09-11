@@ -5,13 +5,13 @@ class Solution {
         }
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < strs[0].length(); i++) {
-            char cur = strs[0].charAt(i);
+            char c = strs[0].charAt(i);
             for (String str : strs) {
-                if (str.length() <= i || str.charAt(i) != cur) {
+                if (str.length() <= i || str.charAt(i) != c) {
                     return sb.toString();
                 }
             }
-            sb.append(cur);
+            sb.append(c);
         }
         return sb.toString();
     }
