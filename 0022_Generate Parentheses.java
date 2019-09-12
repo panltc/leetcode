@@ -1,23 +1,24 @@
 class Solution {
+    private List<String> res = new ArrayList<>();
+    
     public List<String> generateParenthesis(int n) {
-        List<String> res = new ArrayList<>();
         if (n == 0) {
             return res;
         }
-        dfs(n, 0, 0, "", res);
+        dfs(n, 0, 0, "");
         return res;
     }
     
-    private void dfs(int n, int i, int j, String cur, List<String> res) {
+    private void dfs(int n, int i, int j, String data) {
         if (j == n) {
-            res.add(cur);
+            res.add(data);
             return;
         }
         if (i < n) {
-            dfs(n, i + 1, j, cur + "(", res);
+            dfs(n, i + 1, j, data + '(');
         }
         if (j < i) {
-            dfs(n, i, j + 1, cur + ")", res);
+            dfs(n, i, j + 1, data + ')');
         }
     }
 }
