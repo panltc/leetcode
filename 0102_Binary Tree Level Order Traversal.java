@@ -5,10 +5,12 @@ class Solution {
             return res;
         }
         Queue<TreeNode> queue = new LinkedList<>();
+
         queue.offer(root);
         while (!queue.isEmpty()) {
             List<Integer> list = new ArrayList<>();
-            for (int i = queue.size() - 1; i >= 0; i--) {
+            
+            for (int i = queue.size(); i > 0; i--) {
                 root = queue.poll();
                 list.add(root.val);
                 if (root.left != null) {
@@ -20,6 +22,7 @@ class Solution {
             }
             res.add(list);
         }
+
         return res;
     }
 }
