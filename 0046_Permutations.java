@@ -10,7 +10,7 @@ class Solution {
             return res;
         }
         visited = new boolean[len];
-        dfs(nums, new ArrayList<>());
+        dfs(nums, new ArrayList<Integer>());
 
         return res;
     }
@@ -18,7 +18,7 @@ class Solution {
     private void dfs(int[] nums, List<Integer> list) {
         // 如果list的元素个数足够了，就将其加入到res结果集中（list只是一个引用，所以需要复制一份新的list加入res）
         if (list.size() == nums.length) {
-            res.add(new ArrayList<>(list));
+            res.add(new ArrayList<Integer>(list));
             
             return;
         }
