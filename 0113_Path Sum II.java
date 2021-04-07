@@ -10,17 +10,17 @@ class Solution {
         return res;
     }
 
-
     private void dfs(TreeNode root, int targetSum, List<Integer> list) {
-        if (root == null) {
-            return;
-        }
         // 如果该结点是叶结点，并且当前targetSum减去当前结点的值后为0，说明找到了一条路径，先将该结点加入list，并将其加入结果集，最后仍需要删除新加入的结点
         if (root.left == null && root.right == null && targetSum - root.val == 0) {
             list.add(root.val);
             res.add(new ArrayList<Integer>(list));
             list.remove(list.size() - 1);
 
+            return;
+        }
+        // 若为空结点，返回
+        if (root == null) {
             return;
         }
         // 先将当前结点加入list中，并且targetSum减去当前结点的值（每次递归先处理当前结点）
