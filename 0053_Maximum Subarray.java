@@ -5,7 +5,7 @@ class Solution {
         int curr = 0;
         
         /*
-         * 动态规划方程：f(n) = max(f(n − 1) + nums[i], nums[i])
+         * 动态规划方程：f(n) = max(f(n − 1) + num, num)
          * f(n)：以下标n结尾的子序列的最大和
          */
         for (int num : nums) {
