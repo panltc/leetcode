@@ -16,7 +16,7 @@ class Solution {
     }
     
     private void dfs(int[] nums, List<Integer> list) {
-        // 如果list的元素个数足够了，就将其加入到res结果集中（list只是一个引用，所以需要复制一份新的list加入res）
+        // 如果list的元素个数足够了，就将其加入到res结果集中（list只是一个引用，所以需要复制一个新的list加入res）
         if (list.size() == nums.length) {
             res.add(new ArrayList<Integer>(list));
             
@@ -24,7 +24,8 @@ class Solution {
         }
         // 每次递归都遍历所有的元素，通过visisted数组来判断是否访问过该元素
         for (int i = 0; i < nums.length; i++) {
-            /* 如果没有访问过当前元素，说明可以将其加入list中
+            /* 
+             * 如果没有访问过当前元素，说明可以将其加入list中
              * 先将其置为true，代表访问了，然后加入list，进行下一层递归（每次递归都相当于固定了一个位置）
              * dfs返回只有一种可能，就是当前list已经满了，回退一个固定的元素，并将visited置为false
              */
